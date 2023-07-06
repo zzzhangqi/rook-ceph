@@ -107,12 +107,12 @@ data:
   # The default version of CSI supported by Rook will be started. To change the version
   # of the CSI driver to something other than what is officially supported, change
   # these images to the desired release of the CSI driver.
-  # ROOK_CSI_CEPH_IMAGE: "quay.io/cephcsi/cephcsi:v3.8.0"
-  # ROOK_CSI_REGISTRAR_IMAGE: "registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.7.0"
-  # ROOK_CSI_RESIZER_IMAGE: "registry.k8s.io/sig-storage/csi-resizer:v1.7.0"
-  # ROOK_CSI_PROVISIONER_IMAGE: "registry.k8s.io/sig-storage/csi-provisioner:v3.4.0"
-  # ROOK_CSI_SNAPSHOTTER_IMAGE: "registry.k8s.io/sig-storage/csi-snapshotter:v6.2.1"
-  # ROOK_CSI_ATTACHER_IMAGE: "registry.k8s.io/sig-storage/csi-attacher:v4.1.0"
+  ROOK_CSI_CEPH_IMAGE: "registry.cn-hangzhou.aliyuncs.com/inative/cephcsi:v3.8.0"
+  ROOK_CSI_REGISTRAR_IMAGE: "registry.cn-hangzhou.aliyuncs.com/inative/csi-node-driver-registrar:v2.7.0"
+  ROOK_CSI_RESIZER_IMAGE: "registry.cn-hangzhou.aliyuncs.com/inative/csi-resizer:v1.7.0"
+  ROOK_CSI_PROVISIONER_IMAGE: "registry.cn-hangzhou.aliyuncs.com/inative/csi-provisioner:v3.4.0"
+  ROOK_CSI_SNAPSHOTTER_IMAGE: "registry.cn-hangzhou.aliyuncs.com/inative/csi-snapshotter:v6.2.1"
+  ROOK_CSI_ATTACHER_IMAGE: "registry.cn-hangzhou.aliyuncs.com/inative/csi-attacher:v4.1.0"
 
   # To indicate the image pull policy to be applied to all the containers in the csi driver pods.
   # ROOK_CSI_IMAGE_PULL_POLICY: "IfNotPresent"
@@ -560,7 +560,7 @@ spec:
       serviceAccountName: rook-ceph-system
       containers:
         - name: rook-ceph-operator
-          image: rook/ceph:v1.11.9
+          image: registry.cn-hangzhou.aliyuncs.com/inative/rook-ceph-operator:v1.11.9
           args: ["ceph", "operator"]
           securityContext:
             runAsNonRoot: true

@@ -1,7 +1,7 @@
 apiVersion: ceph.rook.io/v1
 kind: CephBlockPool
 metadata:
-  name: replicapool
+  name: block-replicapool
   namespace: rook-ceph
 spec:
   failureDomain: host
@@ -18,7 +18,7 @@ parameters:
     # clusterID is the namespace where the rook cluster is running
     clusterID: rook-ceph
     # Ceph pool into which the RBD image shall be created
-    pool: replicapool
+    pool: block-replicapool
 
     # (optional) mapOptions is a comma-separated list of map options.
     # For krbd options refer
