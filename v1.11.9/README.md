@@ -35,7 +35,7 @@
 ```bash
 git clone https://github.com/inative-io/rook-ceph.git
 $ cd v1.11.9
-$ kubectl create -f crds.yaml -f common.yaml -f operator.yaml
+$ kubectl apply -f crd.yaml -f common.yaml -f operator.yaml
 ```
 
 为Running则Operator部署成功
