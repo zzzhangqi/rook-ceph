@@ -74,7 +74,7 @@ $ kubectl label nodes {kube-node1,kube-node2} ceph-mgr=enabled
 
 #### 创建集群
 
-创建前需修改 `storage.node `字段中的节点名称及对应盘符，例如：
+创建前需修改 `vim cluster.yaml` 中的 `storage.node` 字段中的节点名称及对应盘符，例如：
 
 1. 如果您使用裸盘：
 
